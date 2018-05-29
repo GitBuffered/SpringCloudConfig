@@ -4,5 +4,10 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/configs/{application}
+        git:
+          uri: https://github.com/startSnow/config-repo
+          
+
+##浏览器访问127.0.0.1:8080/foo-default.properties 默认找application.properties
+
+##127.0.0.1:8080/foo-bar/master 以JSON 形式展现

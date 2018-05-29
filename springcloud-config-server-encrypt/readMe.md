@@ -31,25 +31,6 @@ encrypt.key=mykey
 
 
 
-设置keystore
-
-生成keystore
-
-$ keytool -genkeypair -alias mytestkey -keyalg RSA \
-  -dname "CN=Web Server,OU=Unit,O=Organization,L=City,S=State,C=US" \
-  -keypass changeme -keystore server.jks -storepass letmein
-
-
-
-修改application.yml
-
-encrypt:
-  keyStore:
-    location: classpath:/server.jks
-    password: letmein
-    alias: mytestkey
-    secret: changeme
-
 
 >最终发现不是以上的问题，而是配置文件加载顺序的问题，我之前用application 把他切换成bootstarp 文件后，问题解决
 

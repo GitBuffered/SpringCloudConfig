@@ -38,8 +38,12 @@
 		<module>springcloud-config-server-jdbc</module>
 		<module>springcloud-config-server-encrypt</module>
 		<module>spring-cloud-config-server-eureka</module>
+		<module>springcloud-config-client-refresh</module>
+		<module>springcloud-config-server-jks</module>
+		<module>springcloud-config-server-authentication</module>
+		<module>springcloud-config-client-refresh-bus</module>
 	</modules>
-		<repositories>
+	<repositories>
 		<repository>
 			<id>spring-milestones</id>
 			<name>Spring Milestones</name>
@@ -55,9 +59,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+			</plugin>
 		</plugins>
 	</build>
-
-
 	<name>springcloud-config</name>
 </project>
