@@ -1,0 +1,8 @@
+
+#management.security.enabled=false
+management:
+  security:
+    enabled: false
+    
+server:
+  port: 9999

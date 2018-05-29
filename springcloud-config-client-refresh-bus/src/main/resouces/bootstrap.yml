@@ -3,9 +3,13 @@ spring:
     config:
       uri: http://127.0.0.1:8080
       label: master #当ConfigServer后端存储是GIT默认就是master
-      profile: test
   rabbitmq:
     host: 127.0.0.1
     port: 5672
     username: guest
     password: guest
+    
+management:
+  info:
+    git:
+      mode: full
