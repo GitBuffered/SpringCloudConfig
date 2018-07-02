@@ -4,6 +4,15 @@ spring:
       uri: http://127.0.0.1:8080
       label: master #当ConfigServer后端存储是GIT默认就是master
       profile: test
+      fail-fast: true #失败快速响应
+      retry:
+        initial-interval: 2000 # 初始重试间隔时间，默认1000ms
+        max-attempts: 5 # 配置重试次数，默认为6
+        max-interval: 2000 # 最大间隔时间，默认2000ms
+        multiplier: 1.1 # 间隔乘数，默认1.1
+  application:
+    name: configClient
 server:
   port: 9999
+
 
